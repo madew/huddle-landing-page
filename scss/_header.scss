@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0 0 0;
+  padding: 0 24px;
+  max-width: 1300px;
+
+  @include atLarge {
+    margin: 80px auto 0 auto;
+  }
+
+  @include atXLarge {
+    padding: 0;
+  }
+
+  &__logo {
+    width: 96px;
+    height: 16px;
+
+    @include atLarge {
+      width: 240px;
+      height: 40px;
+    }
+  }
+
+  &__btn {
+    padding: 4px 18px;
+    font-size: 0.65rem;
+    font-family: 'Open Sans', sans-serif;
+    color: $primary-color;
+    transition: background-color ease-out 0.15s, color ease-out 0.15s;
+
+    @include atLarge {
+      padding: 8px 30px;
+      font-size: 1rem;
+    }
+
+    &:hover {
+      background-color: $primary-color;
+      color: #fff;
+    }
+  }
+}

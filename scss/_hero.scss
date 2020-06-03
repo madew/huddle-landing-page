@@ -1,0 +1,47 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 125px;
+  text-align: center;
+
+  @include atLarge {
+    padding-top: 227px;
+  }
+
+  &__header {
+    color: $secondary-color;
+    font-size: 1.5rem;
+
+    @include atLarge {
+      font-size: 3rem;
+    }
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    color: $text-color;
+    max-width: 600px;
+    margin-top: 21px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+
+    @include atLarge {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__btn {
+    margin-top: 29px;
+  }
+
+  &__img {
+    margin-top: 100px;
+    width: 100%;
+
+    @include atLarge {
+      margin-top: 111px;
+      width: auto;
+    }
+  }
+}

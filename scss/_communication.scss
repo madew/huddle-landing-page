@@ -1,0 +1,66 @@
+.communication {
+  padding-top: 125px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  text-align: center;
+
+  @include atLarge {
+    padding-top: 61px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__stats {
+    position: relative;
+    margin-bottom: 0;
+    font-size: 3.5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color: $secondary-color;
+
+    @include atLarge {
+      font-size: 6rem;
+    }
+  }
+
+  &__text {
+    margin-top: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    color: $text-color;
+
+    @include atLarge {
+      font-size: 1.5rem;
+      margin-top: 9px;
+    }
+  }
+
+  .icon_communities {
+    &::before {
+      content: url('/images/icon-communities.svg');
+      position: absolute;
+      top: -60px;
+      transform: scale(0.7);
+      transform-origin: left;
+
+      @include atLarge {
+        top: -100px;
+        transform: scale(1);
+      }
+    }
+  }
+
+  .icon_messages {
+    &::before {
+      content: url('/images/icon-messages.svg');
+      position: absolute;
+      top: -60px;
+      transform: scale(0.7);
+      transform-origin: left;
+
+      @include atLarge {
+        top: -100px;
+        transform: scale(1);
+      }
+    }
+  }
+}
