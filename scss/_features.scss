@@ -3,13 +3,17 @@
 
   @include atLarge {
     max-width: 100%;
-    padding-top: 160px;
+    // padding-top: 160px;
   }
 
   &__item {
     position: relative;
     margin-bottom: 200px;
     padding: 80px 28px 60px;
+
+    @include atLarge {
+      margin-bottom: 85px;
+    }
 
     &_grid {
       margin: 0 auto;
