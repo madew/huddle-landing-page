@@ -3,6 +3,9 @@
 @import 'header';
 @import 'hero';
 @import 'communication';
+@import 'features';
+@import 'cta';
+@import 'footer';
 
 html {
   font-size: 100%;
@@ -24,6 +27,13 @@ section,
 footer {
   margin: 0 28px;
 
+  @include atLarge {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+}
+
+.container {
   @include atLarge {
     margin: 0 auto;
     max-width: 1200px;

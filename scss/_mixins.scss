@@ -21,3 +21,31 @@
     @content;
   }
 }
+
+@mixin base-bg-before-after($bg-height) {
+  content: '';
+  position: absolute;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: $bg-height;
+}
+
+@mixin bg-before-after($position, $bg-height, $bg-image) {
+  @if $position == top {
+    &::before {
+      @include base-bg-before-after($bg-height);
+      top: -$bg-height;
+      background-image: url($bg-image);
+    }
+  }
+
+  @if $position == bottom {
+    &::after {
+      @include base-bg-before-after($bg-height);
+      bottom: -$bg-height;
+      background-image: url($bg-image);
+    }
+  }
+}
