@@ -147,4 +147,14 @@
       }
     }
   }
+
+  &__attribution {
+    margin-top: 45px;
+    font-size: 0.7rem;
+    color: $tertiary-color;
+
+    a {
+      color: $primary-color;
+    }
+  }
 }
