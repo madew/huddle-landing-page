@@ -1,0 +1,150 @@
+.footer {
+  background: $secondary-color;
+  position: relative;
+  margin-top: 200px;
+  padding: 70px 0 35px;
+
+  @include bg-before-after(
+    'top',
+    14.13333333vw,
+    '/images/bg-footer-top-mobile.svg'
+  );
+
+  @include atLarge {
+    margin-top: 390px;
+
+    @include bg-before-after(
+      'top',
+      10.97222222vw,
+      '/images/bg-footer-top-desktop.svg'
+    );
+  }
+
+  &__container {
+    margin: 0 28px;
+    max-width: 1200px;
+    display: block;
+
+    @include atLarge {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+
+    @include atXLarge {
+      margin: 0 auto;
+    }
+  }
+
+  &__newsletter {
+    margin-bottom: 100px;
+
+    @include atLarge {
+      width: 530px;
+    }
+  }
+
+  &__header {
+    font-family: 'Open Sans', sans-serif;
+    color: $tertiary-color;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    color: $tertiary-color;
+    font-size: 0.9rem;
+    line-height: 1.7;
+
+    @include atLarge {
+      max-width: 340px;
+    }
+  }
+
+  &__form {
+    text-align: right;
+    margin-top: 0;
+
+    @include atLarge {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      text-align: unset;
+    }
+
+    &_input {
+      width: 100%;
+      height: 48px;
+      padding: 0 10px;
+      border: none;
+      background: $tertiary-color;
+      border-radius: 6px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: $secondary-color;
+
+      @include atLarge {
+        width: 320px;
+      }
+    }
+
+    &_btn {
+      margin-top: 16px;
+      padding: 16px 42px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1rem;
+      color: $tertiary-color;
+      font-weight: 600;
+      line-height: 1;
+
+      @include atLarge {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__logo {
+    width: 200px;
+  }
+
+  &__contact {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8rem;
+    color: $tertiary-color;
+    width: 100%;
+
+    @include atLarge {
+      width: 300px;
+    }
+
+    &_phone {
+      margin-top: 50px;
+    }
+
+    &_phone,
+    &_email {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__social {
+    margin-top: 50px;
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      &:not(:last-child) {
+        margin-right: 18px;
+      }
+    }
+  }
+}

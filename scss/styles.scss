@@ -7,6 +7,10 @@
 @import 'cta';
 @import 'footer';
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 100%;
 }
@@ -18,13 +22,13 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: 'Poppins', sans-serif;
   margin: 0;
 }
 
-section,
-footer {
+section {
   margin: 0 28px;
 
   @include atLarge {
@@ -49,12 +53,20 @@ footer {
     border-radius: 100px;
   }
 
+  &_round_corner {
+    border-radius: 6px;
+  }
+
   &_border_color_primary {
     border: 1px solid $primary-color;
   }
 
   &_bg_color_primary {
     background-color: $primary-color;
+
+    &:hover {
+      background-color: $primary-darker-color;
+    }
   }
 
   &_big {
@@ -70,10 +82,6 @@ footer {
       padding: 25px 100px;
       font-size: 1.25rem;
       box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.25);
-    }
-
-    &:hover {
-      background-color: $primary-darker-color;
     }
   }
 }
